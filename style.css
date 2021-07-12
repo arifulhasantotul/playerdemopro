@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Josefin+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
+@import 'media.css';
+
 :root{
     --main_color: #fff;
     --font-ftitle: 'Josefin Sans', sans-serif;
@@ -29,7 +31,6 @@ body{
 }
 header{
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-top: 6rem;
     margin-bottom: 6rem;
@@ -56,7 +57,6 @@ header .top .top_players{
 }
 header .top .player{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 header .top .player img{
@@ -72,7 +72,7 @@ header hr{
     margin-left: 3rem;
     border-top: 3px solid #D1D1D1;
 }
-header .top_blogs{
+header .top .top_blogs{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
@@ -118,7 +118,6 @@ header .course{
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 1rem;
     border-radius: 2rem;
 }
@@ -179,4 +178,27 @@ header .fa-clock{
 header .time p{
     font-size: 2rem;
     
+}
+
+/* media queries */
+
+@media only screen and (max-width:688px) {
+    
+    header {
+        width: 100%;
+        margin-top: 2rem;
+        display: block;
+    }
+    header .top .top_players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* header .top .player{
+        flex-direction: column;
+    } */
+    header .top .top_blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .course_wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
